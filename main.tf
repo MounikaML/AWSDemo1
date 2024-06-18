@@ -10,9 +10,10 @@ region = "us-west-1"
 }
 
 resource "aws_s3_bucket" "fd_bucket" {
-  bucket = "my-tf-test-bucket9234"  # Replace with your desired bucket name
-
+  bucket = "fd-9234-bucket"  # Replace with your desired bucket name
+  acl    = "private"
   }
+
 
 output "s3_bucket_id" {
   description = "The name of the bucket."
