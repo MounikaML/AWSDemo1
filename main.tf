@@ -1,14 +1,6 @@
-provider "aws" {
-  region = "us-east-1"
-
-}
-
-resource "aws_s3_bucket" "example" {
-  bucket = "my-tf-test-bucket923456"
-
-  tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
+terraform {
+	  backend "s3" {
+    bucket = "my-tf-test-bucket9234"
+    key    = "mounika/awsDemo/terraform.tfstate"
   }
 }
-
