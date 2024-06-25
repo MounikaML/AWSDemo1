@@ -2,11 +2,12 @@ provider "aws" {
 region = "us-east-1"
 }
 
-resource "aws_instance" "instance1" {
-  ami           = "ami-08a0d1e16fc3f61ea"
-  instance_type = "t2.micro"
+resource "aws_s3_bucket" "fd_bucket" {
+  bucket = "my-tf-Mounika-bucket9234"  # Replace with your desired bucket name
 
-  tags = {
-    name = "My-Demo-Instances"
   }
+
+output "s3_bucket_id" {
+  description = "The name of the bucket."
+  value       = aws_s3_bucket.fd_bucket.id
 }
