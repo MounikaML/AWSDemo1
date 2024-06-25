@@ -1,9 +1,3 @@
-terraform {
-	  backend "s3" {
-    bucket = "my-tf-test-bucket9234"
-    key    = "MLMounika/awsDemo/terraform.tfstate"
-  }
-}
 provider "aws" {
 region = "us-east-1"
 }
